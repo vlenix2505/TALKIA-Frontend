@@ -1,0 +1,33 @@
+<div class="login-container">
+  <!-- Importar la imagen del logo -->
+  <img src="/logo.png" alt="Logo de TALKIA" class="logo-image">
+
+  <h2 class="welcome-text">¡Bienvenido a TALKIA!</h2>
+
+  <form class="login-form" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <input 
+        id="usuario"
+        type="text"
+        formControlName="usuario"
+        placeholder="Usuario"
+        required
+        class="input-field"
+      >
+    </div>
+
+    <div class="input-group">
+      <input 
+        id="contrasena"
+        type="password"
+        formControlName="contrasena"
+        placeholder="Contraseña"
+        required
+        class="input-field"
+      >
+    </div>
+
+    <button type="submit" class="submit-button">Aceptar</button>
+  </form>
+</div>
+

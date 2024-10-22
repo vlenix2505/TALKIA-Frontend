@@ -1,117 +1,34 @@
-<!-- Header -->
-<header style="background-color: #2563EB; padding: 16px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-      <div style="color: white; font-weight: bold; font-size: 24px;">TALKIA</div>
-      <nav>
-        <a href="#" style="color: white; margin-right: 16px; text-decoration: none;">Sobre Nosotros</a>
-        <a href="#" style="color: white; margin-right: 16px; text-decoration: none;">Nuestro entorno virtual</a>
-        <a href="#" style="color: white; margin-right: 16px; text-decoration: none;">Precios</a>
-      </nav>
-      <div style="color: white;">EN 👤</div>
-    </div>
+<app-admin-nav></app-admin-nav>
+<div class="admin-container">
+
+  <header class="header">
+    <div class="header-title">TALKIA</div>
+    <nav class="header-right">
+      <div class="hr-1">
+        <a [routerLink]="'/'" href="#" class="hr-item">
+          <img src="/img/home_logo.png">Inicio</a>
+      </div>
+      <div class="hr-2">
+        <a href="#" class="hr-item">
+          <img src="/img/setting_logo.png">Ajustes</a>
+      </div>
+    </nav>
+    <div class="header-profile"><a> <img src="/img/profile_logo.png" alt=""></a></div>
   </header>
-  
-  <!-- Sección "Sobre Nosotros" -->
-  <section style="background-color: #F3F4F6; padding: 48px 0;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <h1 style="color: #EC4899; font-size: 36px; font-weight: bold; margin-bottom: 24px;">TALKIA</h1>
-      <p style="font-size: 18px; margin-bottom: 32px;">Bienvenido al lugar donde tus sueños se hacen realidad, interactuar con otros compañeros en inglés al alcance de tu mano.</p>
-      <button style="background-color: #EC4899; color: white; padding: 12px 24px; border-radius: 24px; border: none; cursor: pointer;">Quiero empezar</button>
-    </div>
+  <section class="menu">
+    <h2>¡Bienvenido a TALKIA admin!</h2>
   </section>
-  
-  <!-- Sección "Nuestros Precios" -->
-  <section style="background-color: #F9FAFB; padding: 48px 0;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="font-size: 28px; font-weight: bold; text-align: center; margin-bottom: 32px;">Nuestros precios</h2>
-      <div style="display: flex; justify-content: space-between; text-align: center;">
-        <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">Mensual</h3>
-          <p style="font-size: 32px; font-weight: bold; margin-bottom: 16px;">S/.50</p>
-          <p style="font-size: 18px; margin-bottom: 24px;">Precio base para que conozcas la app</p>
-          <button style="background-color: #7C3AED; color: white; padding: 12px 24px; border-radius: 24px; border: none; cursor: pointer;">BUY NOW</button>
-        </div>
-        <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">Semestral</h3>
-          <p style="font-size: 32px; font-weight: bold; margin-bottom: 16px;">S/.290</p>
-          <p style="font-size: 18px; margin-bottom: 24px;">El precio perfecto para que inicies a aprender</p>
-          <button style="background-color: #7C3AED; color: white; padding: 12px 24px; border-radius: 24px; border: none; cursor: pointer;">BUY NOW</button>
-        </div>
-        <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">Anual</h3>
-          <p style="font-size: 32px; font-weight: bold; margin-bottom: 16px;">S/.500</p>
-          <p style="font-size: 18px; margin-bottom: 24px;">Paga 10 meses y estudia por 12</p>
-          <button style="background-color: #7C3AED; color: white; padding: 12px 24px; border-radius: 24px; border: none; cursor: pointer;">BUY NOW</button>
-        </div>
-      </div>
-    </div>
+  <section class="admin-menu">
+    <a [routerLink]="'users'" class="menu-item">
+      <img src="/img/users_logo.png"> Usuarios</a>
+    <a [routerLink]="'contents'" class="menu-item">
+      <img src="/img/contentsAdmin_logo.png"> Gestión de Recursos</a>
+    <a [routerLink]="'quizzes'" class="menu-item">
+      <img src="/img/quizzes_logo.png"> Cuestionarios</a>
+    <a [routerLink]="'stadistics'" class="menu-item">
+      <img src="/img/statistics_logo.png"> Estadísticas</a>
+    <a [routerLink]="'histories'" class="menu-item">
+      <img src="/img/payments_logo.png"> Pagos</a>
   </section>
-  
-  <!-- Sección "Nuestros Servicios" -->
-  <section style="background-color: #F3F4F6; padding: 48px 0;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: 28px; font-weight: bold; text-align: center; margin-bottom: 32px;">Nuestros servicios</h2>
-      <div style="display: flex; justify-content: space-between;">
-        <div>
-          <span style="font-size: 48px; display: block; margin-bottom: 16px;">⭐</span>
-          <p style="font-size: 18px;">Aprende idiomas</p>
-        </div>
-        <div>
-          <span style="font-size: 48px; display: block; margin-bottom: 16px;">⭐</span>
-          <p style="font-size: 18px;">Haz nuevos amigos</p>
-        </div>
-        <div>
-          <span style="font-size: 48px; display: block; margin-bottom: 16px;">⭐</span>
-          <p style="font-size: 18px;">Recursos multimedia</p>
-        </div>
-        <div>
-          <span style="font-size: 48px; display: block; margin-bottom: 16px;">⭐</span>
-          <p style="font-size: 18px;">Experiencia única</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Sección "Nuestro Interfaz" -->
-  <section style="background-color: white; padding: 48px 0;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 32px;">Nuestro interfaz</h2>
-      <div style="display: flex; justify-content: space-between;">
-        <img src="assets/interfaz1.png" alt="Interfaz 1" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 100%; max-width: 300px;">
-        <img src="assets/interfaz2.png" alt="Interfaz 2" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 100%; max-width: 300px;">
-        <img src="assets/interfaz3.png" alt="Interfaz 3" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 100%; max-width: 300px;">
-      </div>
-    </div>
-  </section>
-  
-  <!-- Sección "Comentarios" -->
-  <section style="background-color: #F3F4F6; padding: 48px 0;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="font-size: 28px; font-weight: bold; text-align: center; margin-bottom: 32px;">Comentarios</h2>
-      <div style="display: flex; justify-content: space-between;">
-        <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
-          <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 16px;">Nombre TheJames247</h3>
-          <p style="color: #EC4899;">Nivel: Básico</p>
-          <p style="margin-top: 16px;">Hola, la aplicación me ha servido para empezar a aprender inglés y posee varios puntos interesantes. Sin embargo, existen algunos puntos que se pueden mejorar.</p>
-        </div>
-        <div style="background-color: white; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
-          <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 16px;">JayLinarez58</h3>
-          <p style="color: #EC4899;">Nivel: Básico</p>
-          <p style="margin-top: 16px;">Gracias a TALKIA pude reforzar mis habilidades en inglés que me ayudarán a mejorar mi futuro profesional.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer style="background-color: #2563EB; padding: 32px 0;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center; color: white;">
-      <p>&copy; 2023 Nivel Evolution. Todos los derechos reservados.</p>
-      <div style="margin-top: 16px; display: flex; justify-content: center; gap: 16px;">
-        <a href="#" style="color: white; text-decoration: none;">Sobre Nosotros</a>
-        <a href="#" style="color: white; text-decoration: none;">Precios</a>
-        <a href="#" style="color: white; text-decoration: none;">Contáctanos</a>
-      </div>
-    </div>
-  </footer>
-  
+</div>
+<router-outlet />

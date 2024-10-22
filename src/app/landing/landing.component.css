@@ -1,0 +1,187 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background-color: #0074cc;
+  padding: 20px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .nav-links a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.header .nav-links a:hover {
+  color: #e0e0e0;
+}
+
+.header .profile {
+  color: white;
+}
+
+/* About Us Section */
+.about-us {
+  background-color: #f3f4f6;
+  padding: 60px 0;
+}
+
+.about-us .heading {
+  font-size: 36px;
+  color: #ec4899;
+  margin-bottom: 20px;
+}
+
+.about-us .description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.about-us .cta-button {
+  background-color: #ec4899;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.about-us .cta-button:hover {
+  background-color: #e33485;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #f9fafb;
+  padding: 60px 0;
+}
+
+.pricing .heading {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.price-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
+}
+
+.price-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price-card .price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price-card .description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.price-card .buy-button {
+  background-color: #7c3aed;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.price-card .buy-button:hover {
+  background-color: #6b2cc0;
+}
+
+/* Services Section */
+.services {
+  background-color: #f3f4f6;
+  padding: 60px 0;
+}
+
+.services .heading {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.services-grid div {
+  text-align: center;
+}
+
+.star {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0074cc;
+  color: white;
+  padding: 30px 0;
+}
+
+.footer .nav-links a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.footer .nav-links a:hover {
+  color: #e0e0e0;
+}
+
+.profile img{
+  width: 65px;
+}
+

@@ -1,0 +1,18 @@
+<app-nav-user></app-nav-user>
+<div class="container">
+  <div class="order-1">
+    <button [routerLink]="['/user/profile']" class="back-button"><img src="assets/img/arrow.png"></button>
+  </div>
+  <div class="history-content-container">
+    <h1>Historial de Visualización de Materiales</h1>
+    <div class="card-list">
+      <mat-card class="example-card" appearance="outlined" *ngFor="let contentHistory of dataSource.data">
+        <mat-card-content>
+          <h2>{{contentHistory.content}}</h2>
+          <p>Fecha: {{ contentHistory.iviewedAt | date: 'yyyy-MM-dd' }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<router-outlet/>

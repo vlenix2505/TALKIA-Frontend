@@ -1,0 +1,80 @@
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+  <div class="edit-material-container">
+    <div class="header">
+      <button [routerLink]="['/admin/contents']" class="back-button"><img src="assets/img/arrow.png"></button>
+      <h1>Editar Materiales:</h1>
+    </div>
+
+    <div class="form-container">
+      <form [formGroup]="materialForm">
+
+        <div class="form-group">
+          <label>Ingrese el nombre del Material:</label>
+          <input type="text" formControlName="title" placeholder="Nombre del material"/>
+        </div>
+        <div class="form-group">
+          <label>Año de publicación:</label>
+          <input type="number" formControlName="year" placeholder="Año de publicación" />
+        </div>
+        <div class="form-group">
+          <label>Descripción del Material:</label>
+          <textarea rows="4" formControlName="description" placeholder="Descripción del material"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Link del Material:</label>
+          <input type="text" formControlName="link" placeholder="Link del material" />
+        </div>
+        <div class="form-group">
+          <label>Tipo de Material:</label>
+          <div class="options">
+            <label>
+              <input type="radio" formControlName="type" value="Video" /> Video
+            </label>
+            <label>
+              <input type="radio" formControlName="type" value="Libro" /> Libro
+            </label>
+            <label>
+              <input type="radio" formControlName="type" value="Audio" /> Audio
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Tema:</label>
+          <div class="options">
+            <label>
+              <input type="radio" formControlName="theme" value="Reading" /> Reading
+            </label>
+            <label>
+              <input type="radio" formControlName="theme" value="Listening" /> Listening
+            </label>
+            <label>
+              <input type="radio" formControlName="theme" value="Grammar" /> Grammar
+            </label>
+          </div>
+        </div>
+
+        <mat-label>Nivel</mat-label>
+        <div *ngFor="let a of listaNivel" class="levels">
+          <mat-checkbox
+            [checked]="isLevelSelected(a)"
+            (change)="onCheckboxChange($event, a)">
+            {{ a.level }}
+          </mat-checkbox>
+        </div>
+
+
+
+
+        <div class="button-group">
+          <button  class="btn save-btn" (click)=" onSubmit()">Guardar Cambios</button>
+        </div>
+
+      </form>
+    </div>
+
+
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,139 @@
+.container{
+  height: 85vh;
+  display: flex;
+  background-color: #E6E0D1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.plot{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 90%;
+}
+.filter{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  background-color: #D0CBBD;
+  padding: 30px 0 30px 0;
+  border-radius: 12px;
+  gap: 8px;
+}
+
+form .search-input{
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.filter input{
+  width: 170px;
+  height: 50px;
+  background-color: var(--t-platinum);
+  padding: 5px 0 5px 10px;
+  border: none;
+  border-radius: 15px;
+}
+
+
+h1, h2, p{
+  color: #531F33;
+
+}
+
+.order-1{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 5%;
+  margin-top: 20px;
+}
+
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  margin-right: 12px;
+  cursor: pointer;
+  padding-left: 1%;
+}
+
+
+.user-list img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px; /* Equivalent to gap-6 */
+  margin: 20px;
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+
+.user-card {
+  background-color: var(--t-platinum); /* Equivalent to bg-white */
+  padding: 16px 10px; /* Equivalent to p-4 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 6rem; /* Equivalent to w-24 */
+  height: 6rem; /* Equivalent to h-24 */
+  margin-bottom: 10px; /* Equivalent to mb-4 */
+  border-radius: 50%; /* Equivalent to rounded-full */
+}
+
+.user-name {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  font-weight: 600; /* Equivalent to font-semibold */
+}
+
+.user-info {
+  color: #6B7280; /* Equivalent to text-gray-500 */
+}
+
+.button-profile{
+  margin-top: 10px; /* Equivalent to mt-4 */
+  background-color: #E7337D; /* Equivalent to bg-pink-500 */
+  color: #E6E0D1; /* Equivalent to text-white */
+  font-size: 16px;
+  padding: 9px 22px; /* Equivalent to py-2 px-4 */
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+.button-profile:hover {
+  background-color: #d75188; /* Equivalent to hover:bg-pink-600 */
+}
+
+
+

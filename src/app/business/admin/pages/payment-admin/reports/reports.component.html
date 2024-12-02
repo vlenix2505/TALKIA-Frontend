@@ -1,0 +1,72 @@
+<app-nav-admin></app-nav-admin>
+<div class="container">
+  <div class="plot">
+    <div class="header">
+      <button [routerLink]="['/admin/payments']" class="back-button"><img src="assets/img/arrow.png"></button>
+      <h1>Informes Financieros:</h1>
+    </div>
+    <div class="results">
+      <div class="table-results">
+        <div class="tables">
+          <div class="susTable">
+            <button>Suscripciones</button>
+            <table mat-table [dataSource]="dataSus" matSort>
+              <ng-container matColumnDef="suscriptionType">
+                <th mat-header-cell *matHeaderCellDef> Categoría </th>
+                <td mat-cell *matCellDef="let element"> {{element.suscriptionType}} </td>
+              </ng-container>
+              <ng-container matColumnDef="countHistories">
+                <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                <td mat-cell *matCellDef="let element"> {{element. countHistories}} </td>
+              </ng-container>
+              <ng-container matColumnDef="totalAmount">
+                <th mat-header-cell *matHeaderCellDef> Monto </th>
+                <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+            </table>
+          </div>
+          <div class="payTable">
+            <button>Pagos Recibidos</button>
+            <table mat-table [dataSource]="dataPay" matSort>
+              <ng-container matColumnDef="varType">
+                <th mat-header-cell *matHeaderCellDef> Tipo de Pago </th>
+                <td mat-cell *matCellDef="let element"> {{element.varType}} </td>
+              </ng-container>
+              <ng-container matColumnDef="count">
+                <th mat-header-cell *matHeaderCellDef> Cantidadd </th>
+                <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="generate">
+          <img src="/assets/img/report.png">
+          <button (click)="onFilter()">Generar Informe</button>
+        </div>
+        <div class="filters">
+          <div class="radio-button">
+            <input type="radio" id="filterDefault" name="filter" value="1" (change)="onChange($event)">
+            <label for="filterDefault">Generar por defecto</label>
+          </div>
+          <div class="radio-button">
+            <input type="radio" id="filterRange" name="filter" value="2" (change)="onChange($event)">
+            <label for="filterRange">Generar por rango de fechas</label>
+          </div>
+
+          <div class="date-filter">
+
+            <input type="date" id="startDate" (change)="onDateChange('start', $event)">
+            <input type="date" id="endDate" (change)="onDateChange('end', $event)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

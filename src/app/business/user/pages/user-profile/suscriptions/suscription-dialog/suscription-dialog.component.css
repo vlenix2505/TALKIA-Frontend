@@ -1,0 +1,187 @@
+.plan-title, .price{
+  font-size: 16px;
+}
+.plans{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.mat-dialog-title h1, .mat-mdc-dialog-container .mat-mdc-dialog-title{
+  color: var(--t-wine) !important;
+}
+
+/**/
+
+.container{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.matDialogSuscription{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: var(--t-wine);
+}
+
+.dialogTitle{
+  height: 10%;
+  width: 100%;
+  color: var(--t-wine);
+  margin-bottom: 10px;
+}
+
+.mat-dialog-content{
+  height: 95%;
+  width: 100%;
+}
+
+.mat-dialog-actions{
+  height: 5%;
+  width: 100%;
+}
+
+
+.plans{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 60px;
+}
+.card-price{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 3px;
+  width: 60%;
+  background-color: white;
+  border: 1px solid var(--t-blue);
+}
+
+
+.plan-title{
+  color: var(--t-wine);
+  font-size: 14px;
+}
+
+.price{
+  color: var(--t-blue);
+  font-size: 14px; ;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+.b1{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+::ng-deep .mat-horizontal-content-container {
+  overflow: hidden;
+  padding: 0 24px 0 24px !important;
+}
+
+::ng-deep .mat-mdc-dialog-container .mat-mdc-dialog-title {
+  color: var(--t-wine) !important;
+}
+
+
+.btn-register{
+  background-color: var(--t-rose);
+  color: var(--t-white);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  width: 24%;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+#payment-options{
+  width: 90%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.op{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--t-blue);
+  width: 110px;
+  height: 80px;
+  padding: 2px;
+  border-radius: 12px;
+}
+
+.op:nth-child(3) img, .op:nth-child(4) img, .op:nth-child(5) img{
+  width: 60%;
+  height: 80%;
+}
+
+.op:nth-child(1) img{
+  width: 60%;
+  height: 70%;
+}
+
+.op:nth-child(2) img{
+  width: 80%;
+  height: 40%;
+}
+
+.op:hover{
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  border-color: black;
+  background-color: var(--t-rose);
+  cursor: pointer;
+}
+
+::ng-deep .mat-mdc-dialog-title{
+  padding: 0;
+}
+
+.pay-process{
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-payments{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+}

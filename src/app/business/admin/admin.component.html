@@ -1,0 +1,19 @@
+<div class="admin-container">
+  <app-nav-admin></app-nav-admin>
+  <section class="menu">
+    <h2>¡Bienvenido a TALKIA admin!</h2>
+  </section>
+  <section class="admin-menu">
+    <a [routerLink]="'users'" class="menu-item">
+      <img src="assets/img/users_logo.png"> Usuarios</a>
+    <a [routerLink]="'contents'" class="menu-item">
+      <img src="assets/img/contentsAdmin_logo.png"> Gestión de Recursos</a>
+    <a [routerLink]="'quizzes'" class="menu-item">
+      <img src="assets/img/quizzes_logo.png"> Cuestionarios</a>
+    <a [routerLink]="'statistics'" class="menu-item">
+      <img src="assets/img/statistics_logo.png"> Estadísticas</a>
+    <a [routerLink]="'payments'" class="menu-item">
+      <img src="assets/img/payments_logo.png"> Pagos</a>
+  </section>
+</div>
+<router-outlet />

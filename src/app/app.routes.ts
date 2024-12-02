@@ -1,31 +1,39 @@
-import {Routes } from '@angular/router';
-import {LandingComponent} from './landing/landing.component';
-import {HomeComponent} from './home/home.component';
-import {ContentAdminComponent} from './home/pages/content-admin/content-admin.component';
-
-import UsersComponent from './home/pages/users/users.component';
-import { PaymentAdminComponent } from './home/pages/payment-admin/payment-admin.component';
-import { LoginComponent } from './login/login.component';
-
-
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {userGuard} from './security/user.guard';
+import {adminGuard} from './security/admin.guard';
 
 export const routes: Routes = [
   {
-    path: '', component: LandingComponent
+    path: '',
+    loadChildren: () => import('./business/landing/landing.routes').then(m => m.LandingRoutes)
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'welcome',
+    loadChildren: () => import('./business/welcome/welcome.routes').then(m => m.WelcomeRoutes)
   },
   {
-    path: 'home',
-    children: [
-      { path: '', component: HomeComponent },
-      { path: 'users', component: UsersComponent },
-      { path: 'contents', component: ContentAdminComponent },
-      { path: 'histories', component: PaymentAdminComponent },
-    ]
+    path: 'login',
+    loadChildren: () => import('./business/welcome/pages/login/login.routes').then(m => m.LoginRoutes)
   },
   {
-    path:'',redirectTo:'', pathMatch:'full'
+    path: 'register',
+    loadChildren: () => import('./business/welcome/pages/register/register.routes').then(m => m.RegisterRoutes)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./business/admin/admin.routes').then(m => m.AdminRoutes),
+    canActivate:[adminGuard]
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./business/user/user.routes').then(m => m.UserRoutes),
+    canActivate:[userGuard]
   }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

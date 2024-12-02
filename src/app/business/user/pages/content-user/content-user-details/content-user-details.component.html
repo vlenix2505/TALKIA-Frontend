@@ -1,0 +1,38 @@
+<app-nav-user></app-nav-user>
+<div class="order-1">
+  <button [routerLink]="['/user/contents']" class="back-button"><img src="assets/img/arrow.png">
+  </button>
+</div>
+<div class="book-container">
+  <!-- Sección de información del libro -->
+  <div class="book-info">
+    <img src="assets/img/content_description.png" alt="Book Icon" class="book-icon" /> <!-- Reemplaza con la imagen correspondiente -->
+
+    <h3>{{ content.title }}</h3>
+    <p><strong>Año:</strong> {{ content.year }}</p>
+    <p><strong>Tema:</strong> {{ content.theme }}</p>
+    <p><strong>Tipo:</strong> {{ content.type }}</p>
+    <button class="read-button" (click)="openLink(content.link)">Leer</button>    <p class="synopsis"><strong>Sinopsis:</strong></p>
+    <p>{{ content.description }}</p>
+  </div>
+
+  <!-- Sección de reseñas -->
+  <div class="reviews">
+    <h3>Reseñas</h3>
+    <p>Puntuación Promedio:</p>
+    <app-star-rating [rating]= avgRate></app-star-rating>
+
+    <div class="review-item" *ngFor="let review of reviews">
+      <p><strong>{{ review.user.userName || 'Anónimo' }}</strong></p> <!-- Muestra el nombre del usuario o 'Anónimo' si no hay nombre -->
+      <app-star-rating [readonly]="true" [rating]="review.score"></app-star-rating> <!-- Mostrar el rating de cada reseña -->
+    </div>
+  </div>
+
+
+  <div class="rate">
+    <h3>Puntuar</h3>
+    <p>Marque la cantidad de estrellas:</p>
+    <app-star-rating [(rating)]="currentRating"></app-star-rating> <!-- Enlace bidireccional para capturar la calificación -->
+    <button class="accept-button" (click)="addRating()">Aceptar</button>
+  </div>
+</div>

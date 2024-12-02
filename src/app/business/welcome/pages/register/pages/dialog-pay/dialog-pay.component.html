@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>¡Te falta solo un paso!</h2>
+<div mat-dialog-content>
+  <img [src]="data.src">
+  @if (data.type === 'Mastercard' || data.type === 'Visa'){
+    <p>Ingresa los datos de tu tarjeta</p>
+    <form>
+      <input matInput formControlName="userName" placeholder="Número de tarjeta" />
+      <input matInput formControlName="name" placeholder="Código de seguridad" />
+      <input matInput formControlName="email" placeholder="Fecha de vencimiento" />
+      <input matInput formControlName="email" placeholder="Nombre en la tarjeta" />
+    </form>
+  } @else {
+    <p>Escanea el QR para realizar el pago por {{data.type}}</p>
+    <img src="assets/img/QR-example.png">
+  }
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="onAccept()">Aceptar</button>
+  <button mat-button mat-dialog-close>Cerrar</button>
+</div>

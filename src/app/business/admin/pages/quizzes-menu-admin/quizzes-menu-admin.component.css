@@ -1,0 +1,266 @@
+
+.admin-container {
+  background-color: #E6E0D1;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #0066cc;
+  color: #D9D9D9;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: space-between;*/
+  height: 75px;
+  padding: 0 20px;
+}
+
+.header-title{
+  text-align: right;
+  font-size: 28px;
+  width: 33%;
+}
+.header-logo {
+  /*width: 60px;*/
+  width: 20%;
+  text-align: left;
+  margin-right: 20px;
+
+}
+.header-logo img{
+  width: 60px;
+  margin-right: 20px;
+
+}
+
+.header-right{
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.header-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hr-1 a, .hr-2 a{
+  color: #D9D9D9;
+  text-decoration: none;;
+}
+
+.hr-1,  .hr-2{
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/*Ãconos */
+.hr-1 img, .hr-2 img{
+  width: 35px;
+}
+
+.hr-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+.header-profile{
+  padding-left: 25px;
+  width: 14%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-profile img{
+  width: 60px;
+}
+
+
+body {
+  background-color: #ff4d4d;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.admin-container {
+  background-color: #E6E0D1;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #0066cc;
+  color: #D9D9D9;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: space-between;*/
+  height: 75px;
+  padding: 0 20px;
+}
+
+.header-title{
+  text-align: right;
+  font-size: 28px;
+  width: 33%;
+}
+.header-logo {
+  /*width: 60px;*/
+  width: 20%;
+  text-align: left;
+  margin-right: 20px;
+
+}
+.header-logo img{
+  width: 60px;
+  margin-right: 20px;
+
+}
+
+.header-right{
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.header-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hr-1 a, .hr-2 a{
+  color: #D9D9D9;
+  text-decoration: none;;
+}
+
+.hr-1,  .hr-2{
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/*Ã­conos */
+.hr-1 img, .hr-2 img{
+  width: 35px;
+}
+
+.hr-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+.header-profile{
+  padding-left: 25px;
+  width: 14%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-profile img{
+  width: 60px;
+}
+
+
+body{
+  background-color: #ff4d4d;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #531F33;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.admin-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  color: #531F33;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex-direction: column;
+}
+.menu-item img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 5px;
+}
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item:active {
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .admin-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .admin-menu {
+    grid-template-columns: 1fr;
+  }
+}

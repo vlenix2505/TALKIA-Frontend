@@ -1,0 +1,62 @@
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+
+  <div class="header">
+    <button [routerLink]="['/admin']" class="back-button"><img src="assets/img/arrow.png"></button>
+    <h1 class="tittle">{{title}}</h1>
+  </div>
+
+  <div class="add-buttons">
+    <button [routerLink]="'insert-content'" class="add-button" >Añadir Material</button>
+    <button [routerLink]="'history-admin-content'" class="add-button" >Ver Historial de Recursos</button>
+
+  </div>
+  <!-- Filtro de Contenidos -->
+  <div class="filter">
+    <input
+      type="text"
+      placeholder="Buscar Contenido"
+      class="search-input"
+      (input)="onSearch($event)"
+    />
+  </div>
+  <!-- Cabecera de la tabla -->
+  <div class="table-header">
+    <div class="table-cell" >Id</div>
+    <div class="table-cell title-cell">Título</div>
+    <div class="table-cell">Tema</div>
+    <div class="table-cell">Tipo</div>
+    <div class="table-cell">Año</div>
+    <div class="table-cell">Dificultad</div>
+    <div class="table-cell"></div>
+  </div>
+
+  <!-- Lista de Contenidos en formato de tabla usando div -->
+  <div class="table-body">
+    <div
+      *ngFor="let content of dataSource.data"
+      class="table-row"
+    >
+      <div class="table-cell" >{{ content.id }}</div>
+      <div class="table-cell title-cell">{{ content.title }}</div>
+      <div class="table-cell">{{ content.theme }}</div>
+      <div class="table-cell">{{ content.type }}</div>
+      <div class="table-cell">{{ content.year }}</div>
+      <div class="table-cell">
+        <p *ngFor="let level of content.levels">{{ level.level}}</p>
+      </div>
+      <div class="table-cell">
+        <button [routerLink]="['edit-content',content.id]" class="btn-update" >
+          <span>Update</span>
+        </button>
+      </div>
+      <div class="table-cell">
+        <button (click)="openDialog(content.id)" class="btn-delete" >
+          <span>Delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<router-outlet />

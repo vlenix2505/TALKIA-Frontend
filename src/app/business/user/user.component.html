@@ -1,0 +1,18 @@
+<div class="user-container">
+
+  <app-nav-user></app-nav-user>
+
+  <section class="menu">
+    <h2>¡Bienvenido a TALKIA!</h2>
+  </section>
+
+  <section class="user-menu">
+    <a [routerLink]="'contents'" class="menu-item">
+      <img src="assets/img/contentsAdmin_logo.png"> Biblioteca</a>
+    <a [routerLink]="'quizzes'" class="menu-item">
+      <img src="assets/img/quizzes_logo.png"> Cuestionarios</a>
+    <a [routerLink]="'tracking'" class="menu-item">
+      <img src="assets/img/statistics_user_logo.png"> Seguimiento</a>
+  </section>
+</div>
+<router-outlet />

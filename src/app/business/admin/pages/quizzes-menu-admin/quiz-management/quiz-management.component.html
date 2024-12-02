@@ -1,0 +1,49 @@
+
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+  <div class="header">
+    <button [routerLink]="['/admin/quizzes']" class="back-button"><img src="assets/img/arrow.png"></button>
+    <h1>Gestión de Cuestionarios</h1>
+  </div>
+
+  <div class="body-container">
+
+    <div class="main-content">
+
+      <p class="subheader">Lista de Cuestionarios Disponibles:</p>
+
+      <!-- Encabezado de "tabla" -->
+      <div class="table-header">
+        <div class="table-cell">ID</div>
+        <div class="table-cell">Total Points</div>
+        <div class="table-cell">Fecha Creación</div>
+        <div class="table-cell">Usuario</div>
+      </div>
+
+      <!-- Filas de datos -->
+      <div class="table-row" *ngFor="let quiz of dataSource.data ">
+        <div class="table-cell">{{ quiz.id }}</div>
+        <div class="table-cell">{{ quiz.totalPoints }}</div>
+        <div class="table-cell">{{ (quiz.icreatedAt)| date: 'yyyy-MM-dd HH:mm:ss'  }}</div>
+        <div class="table-cell">{{ quiz.user.userName }}</div>
+      </div>
+    </div>
+
+    <div class="filter-sidebar">
+      <div class="filter-try">
+        <h3>Filtrar Cuestionarios</h3>
+        <div class="filter-input">
+          <input
+            type="text"
+            placeholder="Ingrese el usuario"
+            class="search-input"
+            (input)="onSearch($event)"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<router-outlet />

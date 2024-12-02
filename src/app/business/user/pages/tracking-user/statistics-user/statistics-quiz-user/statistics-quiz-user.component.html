@@ -1,0 +1,65 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <app-nav-user></app-nav-user>
+  <div class="plot">
+    <div class="icon-description">
+      <div class="f-icon-description">
+        <button [routerLink]="['/user/tracking/statistics/']" class="back-button"><img src="assets/img/arrow.png"></button>
+      </div>
+      <h1>Desempeño por Cuestionario</h1>
+    </div>
+    <div class="results">
+      <div class="list-quiz">
+        <div class="quiz" *ngFor="let q of quizzes" [class.selected]="q.id === quizId">
+          <mat-card class="f-description" appearance="outlined">
+            <mat-card-content>
+              <h2>Cuestionario {{quizzes.indexOf(q) + 1}}</h2>
+              <li>Fecha: {{q.icreatedAt| date: 'yyyy-MM-dd'}}</li>
+              <li>Hora: {{q.icreatedAt| date: 'HH:mm:ss'}}</li>
+              <div class="button-quiz">
+                <button (click)="onDetails(q.id)">Ver detalles</button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+      </div>
+      <div class="statistics-quiz">
+        <div class="summary-1">
+          <div class="chart">
+            <p>Porcentaje de respuestas correctas</p>
+            <canvas id="Chart1">{{ chart }}</canvas>
+          </div>
+          <div class="info">
+            <div class="info-text">
+              <p>Cantidad de respuestas correctas</p>
+              <p>{{countCorrectAnswers}}</p>
+            </div>
+            <div class="info-text">
+              <p>Respuestas correctas en el segundo intento</p>
+              <p>{{countSecondAttempt}}</p>
+            </div>
+            <div class="info-text">
+              <p>Total de puntos</p>
+              <p>{{totalPoints}}</p>
+            </div>
+          </div>
+        </div>
+        <p class="summary-2-title">Resumen de preguntas:</p>
+        <div class="summary-2">
+          <div *ngFor="let qq of questionDetails" class="question">
+            <mat-card class="f-description" appearance="outlined">
+              <mat-card-content>
+                <h3>Pregunta {{questionDetails.indexOf(qq) + 1}} ({{qq.is_correct}})</h3>
+                <li>{{qq.question.description}}</li>
+                <li><strong>Feedback:</strong> {{qq.question.feedback}}</li>
+                <li><strong>Respuesta Correcta:</strong> {{qq.correctAnswer}}</li>
+                <li><strong>Número de Intentos:</strong> {{qq.attempt}}</li>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet/>

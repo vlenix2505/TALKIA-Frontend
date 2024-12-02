@@ -1,0 +1,144 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+container{
+  background-color: #E6E0D1; /* color crema */
+
+}
+body {
+  background-color: #E6E0D1; /* color crema */
+  padding: 20px;
+  margin-top: 14px;
+
+}
+
+/* Contenido principal */
+.main-content {
+  background-color: #F3F3F3;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.body-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+  background-color: #E6E0D1;
+
+}
+
+h1 {
+  color: var(--t-wine);
+  padding-left: 1px;
+  padding-top: 9px;
+}
+
+.subheader {
+  font-size: 20px;
+  color: var(--t-wine);
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: white; /* Equivalent to bg-gray-100 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: var(--t-wine);
+
+}
+
+
+.table-cell {
+  padding: 16px;
+  font-size: 16px;
+
+}
+.title-cell {
+  grid-column: span 3;
+  font-size: 16px;
+
+}
+.table-row {
+  background-color: #ffffff;
+  margin-top: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  color: var(--t-wine);
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  gap: 16px; /* Equivalent to gap-y-4 */
+}
+.search-input {
+  padding: 8px; /* Equivalent to p-2 */
+  width: 100%;
+
+}
+
+.filter-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filter-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: var(--t-wine);
+  background-color: #D9D9D9;
+
+}
+
+.filter-try{
+  background-color: #D0CBBD;
+  width: 92%;
+  padding: 8%;
+  border-radius: 8px;
+
+}
+.filter-sidebar {
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+.filter-sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--t-wine);
+  font-weight: bold;
+}
+.filter-sidebar div {
+  margin-bottom: 8px; /* Espaciado entre cada radio button */
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 1%;
+  margin-top: 5px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+

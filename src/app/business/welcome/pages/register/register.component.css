@@ -1,0 +1,276 @@
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+@import url('https://fonts.cdnfonts.com/css/gill-sans-mt-2');
+h1, h4{
+  font-family: 'COCOGOOSE', sans-serif !important;
+
+}
+
+h1{
+  margin-bottom: 0;
+}
+
+h4{
+  font-weight: 200;
+  margin-top: 30px;
+  color: #E6E0D1;
+  font-size: 28px;
+  width: 270px;
+  text-align: center;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #276A9D;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.logo-text {
+  margin-top: 0;
+  font-size: 36px;
+  color: #E6E0D1;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.welcome-text {
+  font-size: 40px;
+  color: var(--t-white);
+  text-align: center;
+}
+
+.talkia-text {
+  font-size: 45px;
+  margin-bottom: 0;
+  color: #E6E0D1;
+  text-align: center;
+}
+
+input{
+  background-color: #E6E0D1;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  border: none;
+
+}
+.input1{
+  width: 45%;
+
+}
+
+.form-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="date"]{
+  width: 45%;
+  color: #531F33;
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+::placeholder {
+  color: #531F33;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.form-2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #E6E0D1;
+  height: auto;
+}
+
+.btn-register{
+  width: 120px;
+  background-color: #E7337D;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E6E0D1;
+  font-family: "Gill Sans MT";
+  border: none;
+
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+#payment-options{
+  padding-top: 20px;
+  width: 60%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.op{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E0D1;
+  width: 80px;
+  height: 60px;
+  padding: 2px;
+  border-radius: 12px;
+  border: none;
+}
+
+.op:nth-child(3) img, .op:nth-child(4) img, .op:nth-child(5) img{
+  width: 60%;
+  height: 80%;
+}
+
+.op:nth-child(1) img{
+  width: 60%;
+  height: 70%;
+}
+
+.op:nth-child(2) img{
+  width: 80%;
+  height: 40%;
+}
+
+.op:hover{
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  border-color: black;
+  background-color: var(--t-rose);
+  cursor: pointer;
+}
+
+.mat-stepper-vertical, .mat-stepper-horizontal {
+  background-color: transparent;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  display: none !important;
+}
+
+.card-plan{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 60px;
+}
+.card-price{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  background-color: var(--t-white);
+}
+
+
+
+.plan-title{
+  color: var(--t-wine);
+  font-size: 18px;
+}
+
+.price{
+  color: var(--t-blue);
+  font-size: 18px; ;
+}
+
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}

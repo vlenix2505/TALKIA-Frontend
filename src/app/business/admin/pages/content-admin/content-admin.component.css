@@ -1,0 +1,123 @@
+h1, h2, p{
+  color: #531F33;
+  padding-left: 2%;
+
+}
+.tittle h1{
+  font-weight: lighter;
+}
+
+.tittle{
+  padding: 1% 3%  3%  0 ;
+}
+
+.container {
+  background-color: #E6E0D1;
+}
+
+
+.header h1{
+  padding: 2%;
+  font-weight: lighter;
+}
+.filter {
+  margin-bottom: 24px; /* Equivalent to mb-6 */
+  padding: 16px;
+}
+
+.search-input {
+  padding: 8px; /* Equivalent to p-2 */
+  border: 1px solid #D9D9D9; /* Equivalent to border-gray-300 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  width: 98%;
+  margin: 10px;
+
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  background-color: #F3F4F6; /* Equivalent to bg-gray-100 */
+  padding: 16px; /* Equivalent to p-4 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: #4B5563; /* Equivalent to text-gray-600 */
+  margin: 15px;
+  width: 95%;
+}
+
+.table-body {
+  display: grid;
+  gap: 16px; /* Equivalent to gap-y-4 */
+}
+
+.table-cell {
+  padding: 8px; /* Add padding for table cells */
+}
+
+.title-cell {
+  grid-column: span 2; /* Customize title cell if needed */
+}
+
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  background-color: #FFFFFF; /* Equivalent to bg-white */
+  padding: 16px; /* Equivalent to p-4 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+  color: #374151; /* Equivalent to text-gray-700 */
+  margin: 15px;
+  width: 95%;
+
+}
+
+.export-button-container {
+  margin-top: 24px; /* Equivalent to mt-6 */
+  text-align: right; /* Equivalent to text-right */
+}
+.add-buttons{
+  padding-left: 2%;
+  display: flex;
+  justify-content: left;
+  gap: 16px;
+}
+.add-button, .btn-update, .btn-delete{
+  padding: 10px;
+  background-color: #E7337D;
+  color: #E6E0D1;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+
+}
+
+.export-button {
+  background-color: #D53F8C; /* Equivalent to bg-pink-500 */
+  color: #FFFFFF; /* Equivalent to text-white */
+  padding: 8px 16px; /* Equivalent to py-2 px-4 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+}
+
+.export-button:hover {
+  background-color: #B83280; /* Equivalent to hover:bg-pink-600 */
+}
+
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 1%;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+

@@ -1,0 +1,45 @@
+<div class="container">
+  <app-nav-user></app-nav-user>
+  <div class="profile-container">
+    <div class="order-1">
+      <button [routerLink]="['/user']" class="back-button"><img src="assets/img/arrow.png"></button>
+    </div>
+    <div class="profile-title">
+      <h1>Mi Perfil</h1>
+    </div>
+    <div class="plot">
+      <div class="left">
+        <img [src]= "profileImage" alt="Imagen de perfil">
+        <input type="file" (change)="onImageSelected($event)" *ngIf="edition">
+        <button class="btn-profile" [routerLink]="'content-history'">Ver Historial</button>
+        <button class="btn-profile" [routerLink]="'subscriptions'">Mis suscripciones</button>
+        <button class="btn-profile" (click)="onEdit()">
+          {{ edition ? 'Guardar cambios' : 'Editar datos' }}
+        </button>
+      </div>
+      <div class="right">
+        <div>
+          <p>Nombre:</p>
+          <input type="text" [(ngModel)]="dataProfile.name" [readonly]="!edition">
+        </div>
+        <div>
+          <p>Correo:</p>
+          <input type="text" [(ngModel)]="dataProfile.email" [readonly]="!edition">
+        </div>
+        <div>
+          <p>Fecha de Nacimiento:</p>
+          <input type="text" [(ngModel)]="dataProfile.dateOfBirth" [readonly]="!edition">
+        </div>
+        <div>
+          <p>Usuario:</p>
+          <input type="text" class="r-input" [(ngModel)]="dataProfile.userName" readonly>
+        </div>
+        <div>
+          <p>Nivel a aprender:</p>
+          <input type="text" class="r-input" [(ngModel)]="dataProfile.level.level" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

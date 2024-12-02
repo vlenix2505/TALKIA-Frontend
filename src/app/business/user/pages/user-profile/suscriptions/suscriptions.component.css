@@ -1,0 +1,169 @@
+.container{
+  background-color: #E6E0D1;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suscriptions-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+.example-card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  background-color: var(--t-platinum);
+  border-radius: 15px;
+  border: none;
+  width: 200px;
+}
+
+mat-card-title{
+  font-size: 16px;
+  color: var(--t-wine);
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.example-card p{
+  font-size: 24px;
+  color: var(--t-blue);
+  margin-top: 8px;
+}
+
+.left{
+  height: 80%;
+  width: 48%;
+}
+
+.left button{
+  background-color: var(--t-rose);
+  color: var(--t-white);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  width: 24%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.current-card{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-t{
+  width: 80%;
+  height: 5%;
+  display: flex;
+  align-items: start;
+}
+
+.right{
+  height: 80%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+h1{
+  text-align: center;
+  color: var(--t-wine);
+}
+
+label{
+  color: var(--t-wine);
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.right h1{
+  margin-bottom: 20px;
+}
+
+
+.div-hr{
+  width: 4%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+select{
+  width: 150px;
+  border-radius: 15px;
+  padding: 4px 0;
+  border: none;
+  background-color: var(--t-platinum);
+}
+
+.vertical-line {
+  border: none;
+  border-left: 2px solid #ccc;
+  height: 100%;
+  margin: 0 20px;;
+}
+
+.card-payment{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.example-s-card{
+  display: flex;
+  background-color: var(--t-platinum);
+  border-radius: 15px;
+  border: none;
+  width: 270px;
+  color: var(--t-wine);
+}
+
+.pay-price{
+  color: var(--t-blue);
+  font-size: 20px;
+}
+
+.card-payment mat-card-title{
+  margin-bottom: 10px;
+}
+
+.pay-price{
+  text-align: right;
+  margin-top: 10px;
+}

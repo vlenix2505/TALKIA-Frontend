@@ -1,0 +1,167 @@
+<!-- Header -->
+<div class = "container">
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+        <h1>TALKIA</h1>
+    </div>
+    <nav>
+      <a href="#" class="nav-link">Sobre Nosotros</a>
+      <a href="#" class="nav-link">Nuestro entorno virtual</a>
+      <a href="#" class="nav-link">Precios</a>
+    </nav>
+    <a [routerLink]="'welcome'"><div class="profile"><img src="/assets/img/profile_logo.png" alt="profile logo"></div></a>
+  </div>
+</header>
+
+<!-- Sección "Sobre Nosotros" (modificada para que coincida con la imagen) -->
+<section class="about-us">
+  <div class="about-us-container">
+    <div class="about-us-text">
+      <h1 class="about-us-title">TALKIA</h1>
+      <p class="about-us-description">Bienvenido al lugar donde tus sueños se hacen realidad, interactuar con otros compañeros en inglés al alcance de tu mano.</p>
+      <button class="about-us-button" [routerLink]="'welcome'">Quiero empezar</button>
+    </div>
+    <img src="assets/img/Photo_Landing.png" alt="Photo Landing" class="landing-photo">
+  </div>
+</section>
+<section class="sobre-nosotros ">
+  <div class="sobre-nosotros-container">
+    <div class="container-sono-title">
+      <h2 class="sobre-nosotros-tittle">Sobre Nosotros</h2>
+      <button class="sobre-nosotros-button" [routerLink]="'welcome'">Quiero saber más</button>
+    </div>
+   <div class="container-sono-description">
+     <p class="sobre-nosotros-description">Somos un grupo de
+       estudiantes de la UPC que desean ayudar a estudiantes universitarios
+       a mejorar sus habilidades de habla en inglés de una manera divertida. </p>
+
+   </div>
+  </div>
+
+</section>
+<!-- Sección "Nuestros Precios" -->
+<section class="pricing">
+  <div class="pricing-container">
+    <h2 class="section-title">Nuestros precios</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h3 class="pricing-plan">Mensual</h3>
+        <p class="pricing-price">S/.50</p>
+        <p class="pricing-description">Precio base para que conozcas la app</p>
+        <button class="pricing-button" [routerLink]="'welcome'">BUY NOW</button>
+      </div>
+      <div class="pricing-card2">
+        <h3 class="pricing-plan2">Semestral</h3>
+        <p class="pricing-price2">S/.290</p>
+        <p class="pricing-description2">El precio perfecto para que inicies a aprender</p>
+        <button class="pricing-button2" [routerLink]="'welcome'">BUY NOW</button>
+      </div>
+      <div class="pricing-card">
+        <h3 class="pricing-plan">Anual</h3>
+        <p class="pricing-price">S/.500</p>
+        <p class="pricing-description">Paga 10 meses y estudia por 12</p>
+        <button class="pricing-button" [routerLink]="'welcome'">BUY NOW</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección "Nuestros Servicios" -->
+<section class="services">
+  <div class="services-container">
+    <h2 class="section-title-services">Nuestros servicios</h2>
+    <div class="services-list">
+      <div class="service-item">
+        <span class="service-icon">★</span>
+        <p class="service-text">Aprende idiomas</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">★</span>
+        <p class="service-text">Haz nuevos amigos</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">★</span>
+        <p class="service-text">Recursos multimedia</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">★</span>
+        <p class="service-text">Experiencia única</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección "Nuestro Interfaz" -->
+
+  <section class="interface">
+    <div class="interface-container">
+      <h2 class="section-title">Nuestro interfaz</h2>
+
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile ><img src="assets/img/rockets.png"></mat-grid-tile>
+        <mat-grid-tile><img src="assets/img/biblioteca_user.png">
+        </mat-grid-tile>
+        <mat-grid-tile><img src="assets/img/quizzes.png"></mat-grid-tile>
+        <mat-grid-tile><img src="assets/img/statistics.png"></mat-grid-tile>
+      </mat-grid-list>
+
+    </div>
+  </section>
+
+<!-- Sección "Comentarios" -->
+<section class="comentarios">
+  <div class="comentarios-container">
+    <h2>Comentarios</h2>
+    <div class="comentarios-flex">
+      <div class="comment-card">
+        <h3>TheJames247</h3>
+        <p class="nivel">Nivel: Básico</p>
+        <p>Hola, la aplicación me ha servido para empezar a aprender inglés y posee varios puntos interesantes. Sin embargo, existen algunos puntos que se pueden mejorar.</p>
+      </div>
+      <div class="comment-card">
+        <h3>JayLinarez58</h3>
+        <p class="nivel">Nivel: Básico</p>
+        <p>Gracias a TALKIA pude reforzar mis habilidades en inglés que me ayudarán a mejorar mi futuro profesional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-intro">
+      <h3>TALKIA</h3>
+      <p class="footer-text">Es una startup dedicada a la difusión del idioma inglés.
+        Nos enfocamos en los estudiantes universitarios debido a que
+        el manejo de un segundo idioma es muy importante para acceder
+        a nuevas oportunidades.</p>
+      <p class="footer-copyright">&copy; 2023 Next Evolution. Todos los derechos reservados.</p>
+
+    </div>
+    <div class="footer-links">
+      <h3>NAVEGACIÓN</h3>
+      <a href="#" class="footer-link">Sobre Nosotros</a>
+      <a href="#" class="footer-link">Nuestros Servicios</a>
+      <a href="#" class="footer-link">Nuestros Entorno virtual</a>
+      <a href="#" class="footer-link">Precios</a>
+      <a href="#" class="footer-link">Comentarios</a>
+    </div>
+    <div class="footer-contacts">
+      <h3>CONTACTOS</h3>
+      <p>EMAIL</p>
+      <p>TalkiaLearning&#64;gmail.com</p>
+      <p>PHONES</p>
+      <p>(808) 555-0111 or (303) 555-0105</p>
+
+    </div>
+  </div>
+
+</footer>
+</div>
+
+  <router-outlet></router-outlet>

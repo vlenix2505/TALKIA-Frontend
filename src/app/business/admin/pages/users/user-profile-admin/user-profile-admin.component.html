@@ -1,0 +1,44 @@
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+
+  <div class="title">
+    <button [routerLink]="['/admin/users']" class="back-button"><img src="assets/img/arrow.png">
+    </button>
+    <h1>Perfil de Usuario</h1>
+  </div>
+  <div class="plot" *ngIf="user">
+
+    <div class="info">
+      <div class="photo">
+        <img [src]="getProfileImage(user.id)" alt="Imagen de perfil">
+        <h3>{{user.name}}</h3>
+      </div>
+      <div class="f-info">
+        <label>Correo:</label>
+        <input type="text" value="{{user.email}}" readonly>
+        <label>Edad:</label>
+        <input type="text" value="{{age}}" readonly>
+        <label>Usuario:</label>
+        <input type="text" value="{{user.userName}}" readonly>
+        <label>Nivel del idioma:</label>
+        <input type="text" value="{{user.level.level}}" readonly>
+        <label>Estado:</label>
+        <input type="text" value="{{status}}" readonly>
+        <label>Fecha de registro:</label>
+        <input type="text" value="{{user.icreatedAt| date: 'yyyy-MM-dd'}}" readonly>
+      </div>
+      <div class="s-info">
+
+        <label>Puntuaciones</label>
+        <div *ngFor="let p of scoresUser">
+          <div class="rating">
+            <h5 class="content-title">{{p.content.title}}</h5>
+            <h5 class="score">{{p.score}}</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet />

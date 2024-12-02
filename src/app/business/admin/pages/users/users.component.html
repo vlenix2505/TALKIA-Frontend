@@ -1,0 +1,28 @@
+<app-nav-admin></app-nav-admin>
+<div class="container">
+  <div class="order-1">
+    <button [routerLink]="['/admin']" class="back-button"><img src="assets/img/arrow.png"></button>
+    <h1 class="header">{{title}}</h1>
+  </div>
+
+  <div class="plot">
+    <!-- Filtro de Usuarios -->
+    <div class="filter">
+      <form>
+        <h2>Filtrar Alumnos</h2>
+        <input type="text" class="search-input" (input)="onSearch($event)"/>
+      </form>
+
+    </div>
+    <!-- Lista de Usuarios en formato de tarjetas -->
+    <div class="user-list">
+      <div *ngFor="let user of dataSource.filteredData" class="user-card">
+        <img [src]="getProfileImage(user.id)" alt="Imagen de perfil">
+        <h2 class="user-name">{{ user.userName }}</h2>
+        <p class="user-info">{{ user.name }}</p>
+        <button class="button-profile" [routerLink]="['user-profile-admin', user.id]">Ver Perfil</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet />

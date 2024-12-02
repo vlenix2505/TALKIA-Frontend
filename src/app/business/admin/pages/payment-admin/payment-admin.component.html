@@ -1,0 +1,100 @@
+<app-nav-admin></app-nav-admin>
+<div class="container">
+  <div class="order-1">
+    <button [routerLink]="['/admin']" class="back-button"><img src="assets/img/arrow.png"></button>
+  </div>
+  <div class="plot">
+    <div class="list">
+      <div class="title">
+        <h1>{{title}}</h1>
+      </div>
+      <div class="mat-elevation-z8">
+
+
+        <table mat-table [dataSource]="dataSource" matSort>
+
+          <ng-container matColumnDef="profile">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element">
+              <img [src]=getProfileImage(element.userId)>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="varName1">
+            <th mat-header-cell *matHeaderCellDef> Username </th>
+            <td mat-cell *matCellDef="let element"> {{element.varName1}} </td>
+          </ng-container>
+
+          <!-- Id Column -->
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID de transacción</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <!-- Fecha Column -->
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{element.startDate|date: 'yyyy/MM/dd'}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef> Monto </th>
+            <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="filters">
+      <div class="form-filter">
+        <h1 class="form-title">Filtrar Transacciones</h1>
+        <form>
+          <input  class="search-input" type="text" (input)="onUserPayments($event)">
+          <label>Tipo de Pago</label>
+          <div class="item">
+            <input type="radio" name="type" value="Visa" (change)="onPaymentTypeChange($event)"> Visa
+          </div>
+          <div class="item">
+            <input type="radio" name="type" value="MasterCard" (change)="onPaymentTypeChange($event)"> MasterCard
+          </div>
+          <div class="item">
+            <input type="radio" name="type" value="Yape" (change)="onPaymentTypeChange($event)" > Yape
+          </div>
+          <div class="item">
+            <input type="radio" name="type" value="Plin" (change)="onPaymentTypeChange($event)" > Plin
+          </div>
+          <div class="item">
+            <input type="radio" name="type" value="PayPal"  (change)="onPaymentTypeChange($event)"> PayPal
+          </div>
+          <div class="item-button">
+            <button id="btnType" type="button"(click)="onTypeReset()">Reset</button>
+          </div>
+
+          <label>Suscripción</label>
+          <div class="item">
+            <input type="radio" name="sus" value="Mensual" (change)="onSuscriptionChange($event)"> Mensual
+          </div>
+          <div class="item">
+            <input type="radio" name="sus" value="Semestral" (change)="onSuscriptionChange($event)"> Semestral
+          </div>
+          <div class="item">
+            <input type="radio" name="sus" value="Anual" (change)="onSuscriptionChange($event)"> Anual
+          </div>
+          <div class="item-button">
+            <button id="btnSus" type="button"(click)="onSusReset()">Reset</button>
+          </div>
+        </form>
+      </div>
+      <div class="reports">
+        <button [routerLink]="'reports'" >Ver informes financieros</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet />

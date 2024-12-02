@@ -1,0 +1,38 @@
+<app-nav-admin></app-nav-admin>
+<div class="container">
+  <div class="title">
+    <div class="title-1">
+      <button [routerLink]="['/admin']" class="back-button"><img src="assets/img/arrow.png">
+      </button>
+      <h1>Estadísticas de Desempeño</h1>
+    </div>
+    <div class="filter-container">
+      <label for="level-filter">Filtrar por nivel:</label>
+      <select id="level-filter" (change)="onLevelChange($event)">
+        <option [value]="1">Básico</option>
+        <option [value]="2">Intermedio</option>
+        <option [value]="3">Avanzado</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="statistics-container">
+
+
+    <div class="performance-stats">
+      <div class="stat-item">
+        <p>Promedio de puntos por nivel</p>
+        <h3>{{ averageScore.toFixed(2) }}</h3>
+      </div>
+      <div class="stat-icon">
+        <img src="assets/img/logo_talkia.png" alt="Icono de Estadísticas" />
+      </div>
+      <div class="stat-item">
+        <p>Cantidad de quizzes</p>
+        <h3>{{ quizCount }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

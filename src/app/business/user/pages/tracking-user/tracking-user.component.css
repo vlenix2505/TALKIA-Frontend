@@ -1,0 +1,157 @@
+.container {
+  background-color: #E6E0D1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.arrow {
+  position: absolute;
+}
+
+.tracking-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #531F33;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.level-container {
+  height: 100%;
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 38%;
+}
+
+.level {
+  background-color: var(--t-rose);
+  width: 100%;
+  height: 9%;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--t-white);
+}
+
+.line {
+  width: 1px;
+  height: 80%;
+  background-color: var(--t-wine);
+  position: absolute;
+}
+
+.rocket {
+  width: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.5s ease;
+}
+
+.points {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-70%);
+  transition: bottom 0.5s ease;
+}
+
+.t-button{
+  position: absolute;
+  bottom: 50%;
+  right: 20%;
+  background-color: var(--t-rose);
+  color: var(--t-white);
+  width: 10%;
+  height: 5%;
+  border-radius: 15px;
+  border: none;
+}
+
+.t-button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .level-container {
+    left: 30%;
+    width: 10%;
+  }
+
+  .level {
+    height: 7%;
+    font-size: 12px;
+  }
+
+  .rocket {
+    width: 15%;
+    left: 50%;
+  }
+
+  .points {
+    left: 70%;
+    transform: translateX(-60%);
+  }
+
+  .t-button {
+    width: 20%;
+    height: 8%;
+    bottom: 40%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-container {
+    left: 20%;
+    width: 15%;
+  }
+
+  .level {
+    height: 5%;
+    font-size: 10px;
+  }
+
+  .rocket {
+    width: 20%;
+    left: 50%;
+  }
+
+  .points {
+    left: 75%;
+    transform: translateX(-50%);
+  }
+
+  .t-button {
+    width: 30%;
+    height: 10%;
+    bottom: 30%;
+    right: 5%;
+    font-size: 12px;
+  }
+}

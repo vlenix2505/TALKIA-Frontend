@@ -1,0 +1,20 @@
+<div class="container">
+  <app-nav-user></app-nav-user>
+  <div class="arrow">
+    <button [routerLink]="['/user']" class="back-button"><img src="assets/img/arrow.png">
+    </button>
+  </div>
+  <div class="title">
+    <h1>Cuestionarios</h1>
+  </div>
+  <div class="access">
+    <button (click)="startQuiz(userId)">
+      Acceder
+    </button>
+  </div>
+  <div class="figure">
+    <img src="/assets/img/figure.png" alt=>
+  </div>
+</div>
+<app-loading-screen *ngIf="loading"></app-loading-screen>
+<router-outlet *ngIf="!loading"/>

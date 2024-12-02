@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="matDialogSuscription">
+    <div class="dialogTitle">
+      <h1 mat-dialog-title>Cambio de suscripción</h1>
+    </div>
+    <div class="mat-dialog-content">
+      <mat-stepper [linear]="isLinear" #stepper >
+        <mat-step [stepControl]="suscripcionForm" >
+          <ng-template matStepLabel>Suscripción</ng-template>
+          <form class="form" [formGroup]="suscripcionForm">
+            <div class="plans">
+              <input type="radio" formControlName="plan" value=1 />
+              <div class="card-price">
+                <span class="plan-title">Suscripción mensual</span>
+                <span class="price">S/. 50.00</span>
+              </div>
+            </div>
+            <div class="plans">
+              <input type="radio" formControlName="plan" value=2 />
+              <div class="card-price">
+                <span class="plan-title">Suscripción semestral</span>
+                <span class="price">S/. 290.00</span>
+              </div>
+            </div>
+            <div class="plans">
+              <input type="radio" formControlName="plan" value=3 />
+              <div class="card-price">
+                <span class="plan-title">Suscripción anual</span>
+                <span class="price">S/. 500.00</span>
+              </div>
+            </div>
+            <div class="b1">
+              <button class="btn-register" (click)="toPaymentType(stepper)">Siguiente</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="metodoPagoForm" >
+          <ng-template matStepLabel>Método de pago</ng-template>
+          <form [formGroup]="metodoPagoForm">
+            <div id="payment-options">
+              <button class="op" value= 2 id="Mastercard" (click)="toPay($event,stepper)">
+                <img src="assets/img/mastercard.png">
+              </button>
+              <button class="op" value= 1 id="Visa" (click)="toPay($event,stepper)">
+                <img src="assets/img/visa.png">
+              </button>
+              <button class="op" value= 3 id="Paypal" (click)="toPay($event,stepper)">
+                <img src="assets/img/paypal.png">
+              </button>
+              <button class="op" value= 4 id="Yape" (click)="toPay($event,stepper)">
+                <img src="assets/img/yape.png">
+              </button>
+              <button class="op" value= 5 id="Plin" (click)="toPay($event,stepper)">
+                <img src="assets/img/pli.png">
+              </button>
+            </div>
+            <button class="btn-register" matStepperPrevious>Regresar</button>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="pagoForm" >
+          <ng-template matStepLabel>Pago</ng-template>
+          <div mat-dialog-content class="pay-process">
+            @if (type === 'Mastercard' || type === 'Visa'){
+              @if (type === 'Mastercard'){
+                <img [src]="src" width="80px" height="60px" margin-top="0">
+              }
+              @if (type === 'Visa'){
+                <img [src]="src" width="90px" height="50px" margin-top="0">
+              }
+
+              <p>Ingresa los datos de tu tarjeta</p>
+              <form class="form-payments">
+                <input matInput formControlName="userName" placeholder="Número de tarjeta" />
+                <input matInput formControlName="name" placeholder="Código de seguridad" />
+                <input matInput formControlName="email" placeholder="Fecha de vencimiento" />
+                <input matInput formControlName="email" placeholder="Nombre en la tarjeta" />
+              </form>
+            } @else {
+              <img [src]="src" width="50px" height="50px" margin-top="0">
+              <p>Escanea el QR para realizar el pago por {{type}}</p>
+              <img class="phone-pay" src="assets/img/QR-example.png" width="150px" height="150px">
+            }
+          </div>
+          <button class="btn-register" matStepperPrevious>Regresar</button>
+          <button class="btn-register" mat-dialog-close (click)="onSubmit()">Aceptar</button>
+        </mat-step>
+      </mat-stepper>
+    </div>
+    <div class="mat-dialog-actions">
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div>
+</div>

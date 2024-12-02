@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="register.component.css">
+<div class="menu-container">
+  <div class="left">
+    <img src="assets/img/logo_talkia.png" alt="Logo de Talkia" class="logo">
+    <h1 class="logo-text">TALKIA</h1>
+  </div>
+  <div class="right">
+    <div class="welcome-first" *ngIf="cont === 0 || cont === 1">
+      <h1 class="welcome-text" *ngIf="cont === 0">¡Bienvenido a</h1>
+      <h1 class="welcome-text" *ngIf="cont === 1">¡Te falta un paso!</h1>
+      <h1 class="talkia-text" *ngIf="cont === 0">TALKIA!</h1>
+    </div>
+    <h4>{{formTitle[cont]}}</h4>
+    <div class="form-container">
+      <mat-stepper [linear]="isLinear" #stepper >
+        <mat-step [stepControl]="datosForm">
+            <ng-template matStepLabel >Datos</ng-template>
+          <form class="form-1" [formGroup]="datosForm">
+            <input class="input1" matInput formControlName="userName" placeholder="Username" />
+            <input class="input1" matInput formControlName="name" placeholder="Nombre" />
+            <input class="input1" matInput formControlName="email" placeholder="Ingresa correo" />
+            <!-- type="date"-->
+            <input class="date-input" type="date" matInput formControlName="dateOfBirth" placeholder="Fecha de nacimiento"/>
+            <input class="input1" type="password" matInput formControlName="password" placeholder="Contraseña" />
+            <button class="btn-register" (click)="avanzarPaso(stepper, true)">Aceptar</button>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="suscripcionForm" >
+            <ng-template matStepLabel >Suscripción</ng-template>
+          <form class="form-2" [formGroup]="suscripcionForm">
+                <div class="card-plan">
+                  <input type="radio" formControlName="plan" value=1 />
+                  <div class="card-price">
+                    <span class="plan-title">Suscripción mensual</span>
+                    <span class="price">S/. 50.00</span>
+                  </div>
+                </div>
+              <div class="card-plan">
+                <input type="radio" formControlName="plan" value=2 />
+                <div class="card-price">
+                  <span class="plan-title">Suscripción semestral</span>
+                  <span class="price">S/. 290.00</span>
+                </div>
+
+              </div>
+              <div class="card-plan">
+                <input type="radio" formControlName="plan" value=3 />
+                <div class="card-price">
+                  <span class="plan-title">Suscripción anual</span>
+                  <span class="price">S/. 500.00</span>
+                </div>
+
+              </div>
+            <button class="btn-register" (click)="retrocederPaso(stepper)">Regresar</button>
+            <button class="btn-register" (click)="avanzarPaso(stepper,false)">Siguiente</button>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="pagoForm" >
+          <ng-template matStepLabel >Pago</ng-template>
+          <form class="form-3" [formGroup]="pagoForm">
+            <div id="payment-options">
+              <button class="op" value= 2  id="Mastercard" (click)="openDialog($event)" >
+                <img src="assets/img/mastercard.png">
+              </button>
+              <button class="op" value= 1  id="Visa" (click)="openDialog($event)" >
+                <img src="assets/img/visa.png">
+              </button>
+              <button class="op" value= 3  id="Paypal" (click)="openDialog($event)" >
+                <img src="assets/img/paypal.png">
+              </button>
+              <button class="op" value= 4 id="Yape" (click)="openDialog($event)" >
+                <img src="assets/img/yape.png">
+              </button>
+              <button class="op" value= 5 id="Plin" (click)="openDialog($event)" >
+                <img src="assets/img/pli.png">
+              </button>
+            </div>
+            <button class="btn-register" (click)="retrocederPaso(stepper)">Regresar</button>
+          </form>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+</div>
+<router-outlet/>

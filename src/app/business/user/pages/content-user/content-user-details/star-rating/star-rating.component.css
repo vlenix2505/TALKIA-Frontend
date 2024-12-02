@@ -1,0 +1,11 @@
+.star {
+  font-size: 2rem;
+  color: #cdcbcb;
+  cursor: pointer;
+  transition: color 0.2s;
+
+}
+
+.star.filled {
+  color: var(--t-wine);
+}

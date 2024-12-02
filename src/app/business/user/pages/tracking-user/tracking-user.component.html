@@ -1,0 +1,20 @@
+<div class="container">
+  <app-nav-user></app-nav-user>
+  <div class="tracking-container">
+    <a [routerLink]="'/user'" class="arrow"><img src="assets/img/arrow.png"></a>
+    <h2>Seguimiento del progreso</h2>
+    <div class="progress-container">
+      <div class="level-container">
+        <p class="level">Avanzado</p>
+        <p class="level">Intermedio</p>
+        <p class="level">Básico</p>
+      </div>
+      <div class="line"></div>
+      <img class="rocket" src="assets/img/rocket.png" alt=""
+           [ngStyle]="{ bottom: rocketPosition + '%' }">
+      <div class="points" [ngStyle]="{ bottom: rocketPosition  + 12 + '%' }">{{points}} puntos</div>
+    </div>
+    <button [routerLink]="'/user/tracking/statistics'" class="t-button">Análisis de Rendimiento</button>
+  </div>
+</div>
+<router-outlet />

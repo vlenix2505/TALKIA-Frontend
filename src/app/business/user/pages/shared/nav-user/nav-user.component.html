@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="header-logo"><img src="assets/img/logo_talkia.png"></div>
+  <div class="header-title">TALKIA</div>
+  <nav class="header-right">
+    <div class="hr-1">
+      <a [routerLink]="'/user'" class="hr-item">
+        <img src="assets/img/home_logo.png">Inicio</a>
+    </div>
+    <div class="hr-2">
+      <a [routerLink]="'/user/settings'" class="hr-item">
+        <img src="assets/img/setting_logo.png">Ajustes</a>
+    </div>
+  </nav>
+  <div class="header-profile"><a [routerLink]="['/user/profile']"> <img src="assets/img/profile_logo.png" alt=""></a></div>
+</header>

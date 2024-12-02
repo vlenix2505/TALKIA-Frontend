@@ -1,0 +1,44 @@
+<app-nav-admin></app-nav-admin>
+<div class="container">
+  <div class="order-1">
+    <button [routerLink]="['/admin/contents']" class="back-button"><img src="assets/img/arrow.png"></button>
+  </div>
+  <div class="plot">
+    <div class="left">
+      <div class="title"><h1>Historial de contenidos:</h1></div>
+      <div class="table">
+        <table mat-table [dataSource]="dataSource" matSort>
+          <ng-container matColumnDef="empty">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element"><img src="assets/img/layers.png"></td>
+          </ng-container>
+          <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef>Nombre del Material</th>
+            <td mat-cell *matCellDef="let element">{{element.content}}</td>
+          </ng-container>
+          <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef>Usuario</th>
+            <td mat-cell *matCellDef="let element">{{element.userName}}</td>
+          </ng-container>
+          <ng-container matColumnDef="iViewedAt">
+            <th mat-header-cell *matHeaderCellDef>Fecha de Visualización</th>
+            <td mat-cell *matCellDef="let element">{{element.iviewedAt | date: 'dd/MM/yyyy, HH:mm:ss'}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+    <div class="right">
+      <div class="filters">
+        <form>
+          <label class="form-title">Filtrar Recursos</label>
+          <div class="searchBar">
+            <span class="material-icons search-icon" placeholder="search"></span>
+            <input type="text" (input)="onSearch($event)">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

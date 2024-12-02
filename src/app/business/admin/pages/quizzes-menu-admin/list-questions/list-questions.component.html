@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="../../../../welcome/pages/login/login.component.css">
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+  <div class="header">
+    <button [routerLink]="['/admin/quizzes']" class="back-button"><img src="assets/img/arrow.png"></button>
+    <h1>Gestión de Preguntas</h1>
+  </div>
+  <div class="body-container">
+
+    <div class="main-content">
+
+      <p class="subheader">Lista de Preguntas Disponibles:</p>
+
+      <!-- Encabezado de "tabla" -->
+      <div class="table-header">
+        <div class="table-cell">ID</div>
+        <div class="table-cell title-cell" >Pregunta</div>
+        <div class="table-cell"></div>
+
+      </div>
+
+      <!-- Filas de datos -->
+      <div class="table-row" *ngFor="let question of dataSource.data">
+        <div class="table-cell">{{ question.id }}</div>
+        <div class="table-cell title-cell">{{ question.description }}</div>
+        <div class="table-cell btn">
+          <button [routerLink]="['edit-question', question.id]" class="btn-update" >
+            <span>Update</span>
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="filter-sidebar">
+      <h3>Filtrar Preguntas</h3>
+      <div class="filter-input">
+        <input
+          type="text"
+          placeholder="Buscar Pregunta"
+          class="search-input"
+          (input)="onSearch($event)"
+        />
+
+      <label>Nivel de Dificultad</label>
+      <label>
+        <input type="radio" name="level" value="Basico" (change)="onDifficultyChange($event)"> Básico
+      </label>
+      <label>
+        <input type="radio" name="level" value="Intermedio" (change)="onDifficultyChange($event)"> Intermedio
+      </label>
+      <label>
+          <input type="radio" name="level" value="Avanzado" (change)="onDifficultyChange($event)"> Avanzado
+      </label>
+      <button id="btnType" type="button"  (click)="onDifficultyReset()">Reset</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<router-outlet />

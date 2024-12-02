@@ -1,0 +1,15 @@
+<div class="container">
+  <app-nav-user></app-nav-user>
+  <div class="order-1">
+    <button [routerLink]="['/user']" class="back-button"><img src="assets/img/arrow.png"></button>
+  </div>
+  <h1>Ajustes</h1>
+  <div class="btn-container">
+    <button>Términos y Condiciones</button>
+    <button>Política de Privacidad</button>
+    <button>Soporte al Cliente</button>
+    <button (click) ="LogOut()" >Cerrar Sesión</button>
+    <button (click)="deleteAccount()">Eliminar Cuenta</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

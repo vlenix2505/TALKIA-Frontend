@@ -1,0 +1,19 @@
+<div class="admin-container">
+  <app-nav-admin></app-nav-admin>
+  <section class="menu">
+    <h2>Seleccione una opción</h2>
+  </section>
+
+  <section class="admin-menu">
+    <a [routerLink]="'list-quizzes'" class="menu-item">
+      <img src="assets/img/quizzes_logo.png">Ver Cuestionarios</a>
+
+    <a [routerLink]="'list-questions'" class="menu-item">
+      <img src="assets/img/questions_logo.png">Ver Preguntas</a>
+
+    <a [routerLink]="'add-question'" class="menu-item">
+      <img src="assets/img/questions_logo.png">Agregar Preguntas</a>
+  </section>
+
+</div>
+<router-outlet />

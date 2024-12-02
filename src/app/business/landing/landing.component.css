@@ -1,0 +1,401 @@
+container{
+  background-color: #276A9D;
+}
+/* Header */
+.header {
+  background-color: #276A9D;
+  padding: 16px;
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo h1{
+  color: white;
+  font-size: 24px;
+}
+.nav-link {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+}
+.profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Sobre Nosotros */
+.about-us {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: #E6E0D1;
+
+}
+
+.about-us-container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+
+.landing-photo {
+  width: 50%;
+  max-width: 400px;
+}
+.about-us-text {
+  text-align: left;
+  padding-right: 2%;
+}
+.about-us-title {
+  color: #EC4899;
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+.about-us-description {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #531F33;
+}
+.about-us-button, .sobre-nosotros-button {
+  background-color: #E6E0D1;
+  color: #531F33;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: 2px solid #531F33;
+}
+.sobre-nosotros {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: #E6E0D1;
+
+}
+.container-sono-title {
+  width: 40%;
+}
+.container-sono-description {
+  width: 60%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sobre-nosotros-container {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 8%;
+  color: #531F33;
+
+}
+.sobre-nosotros-tittle{
+  text-align: left;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 8%;
+}
+
+/* Pricing */
+.pricing {
+  background-color: #D0CBBD;
+
+}
+.pricing-container {
+  background-color: #D0CBBD;
+  max-width: 100%;
+  padding: 5%;
+  text-align: center;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #531F33;
+
+}
+.pricing-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+.pricing-card {
+  background-color: #D0CBBD;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #531F33;
+  color:#531F33;
+  width: 25%;
+}
+.pricing-plan {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.pricing-price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.pricing-description {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+.pricing-button {
+  background-color: #531F33;
+  color: #E6E0D1;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+.pricing-card2 {
+  background-color: #531F33;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #531F33;
+  color: #E6E0D1;
+  width: 25%;
+
+}
+.pricing-plan2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.pricing-price2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.pricing-description2 {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+.pricing-button2 {
+  background-color: #E6E0D1;
+  color: #531F33;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+
+}
+/* Servicios */
+.services {
+  background-color: #E6E0D1;
+  padding: 5%;
+
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-title-services{
+  color: #531F33;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+.service-item {
+  text-align: center;
+}
+.service-icon {
+  font-size: 160px;
+  margin-bottom: 16px;
+  color: #531F33;
+}
+.service-text {
+  padding: 10%;
+  font-size: 18px;
+  color: #531F33;
+}
+
+/* Interface */
+.interface {
+  background-color: #D0CBBD;
+  padding: 5%;
+}
+.interface-container {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.interface-images img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+
+.comentarios {
+  padding: 5%;
+  background-color: #E6E0D1;
+
+}
+
+.comentarios-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comentarios-container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #531F33;
+}
+
+.comentarios-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  padding: 2%;
+}
+.nivel{
+  padding-bottom: 8px;
+  border-bottom: 1px solid #4a4a4a;
+
+}
+.comment-card {
+  background-color: white;
+  padding: 24px;
+  text-align: center;
+  width: 48%; /* Ajuste de ancho para que haya espacio entre las tarjetas */
+}
+
+.comment-card h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #531F33;
+}
+
+.comment-card .nivel {
+  color: #EC4899;
+}
+
+.comment-card p {
+  margin-top: 16px;
+  color: #531F33;
+
+}
+
+
+
+footer {
+  background-color: #276A9D;
+  color: #E6E0D1;
+  text-align: center;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 25px;
+
+}
+footer h3{
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+footer p {
+  font-size: 12px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #E6E0D1;
+
+}
+.footer-text{
+  margin-bottom: 10px;
+}
+.footer-copyright{
+  padding-top: 10px;
+}
+.footer-container{
+  display: flex;
+  padding: 0 2% 0 2%;
+  text-align: left;
+  gap:2%;
+}
+.footer-intro{
+  flex:1;
+
+}
+.footer-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+}
+.footer-link{
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+.footer-contacts{
+  flex: 1;
+  font-size: 14px;
+
+}
+.footer-contacts p{
+  padding-bottom: 8px;
+}
+
+
+mat-grid-tile {
+  background: #D0CBBD;
+}
+mat-grid-tile img{
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column; /* Cambia la disposición a columna */
+    gap: 16px; /* Espacio entre las tarjetas cuando están en columna */
+
+  }
+  .services-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comentarios-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .comentarios-flex {
+    flex-direction: column;
+    gap: 16px;
+
+  }
+  .comment-card {
+    width: 90%;
+
+  }
+
+  .pricing-card, .pricing-card2{
+    width: 90%;
+  }
+  .footer-container{
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .footer-links {
+    margin-top: 3%;
+    padding: 0;
+  }
+}

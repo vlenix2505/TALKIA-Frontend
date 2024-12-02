@@ -1,0 +1,52 @@
+<div class="questionnaire-container">
+  <div class="steppers"
+       [ngClass]="{ 'stepper-summary': stepper.selectedIndex === lista.length }">
+    <mat-stepper [orientation]="(stepperOrientation | async)!" #stepper>
+      <ng-container *ngFor="let q of lista; let i = index">
+        <mat-step [stepControl]="formGroups[i]" class="porfi" >
+          <form [formGroup]="formGroups[i]" class="container-question">
+            <div class="question-title">
+              <h3>Pregunta</h3>
+            </div>
+            <div class="question-description">
+              <p>{{ q.question }}</p>
+            </div>
+            <div class="grid">
+              <button *ngFor="let answer of answersMap[q.questionId]" [value]="answer.answersDescription" (click)="onSelectionChange($event, i,q.qqId,stepper)">
+                {{answer.answersDescription}}
+              </button>
+            </div>
+          </form>
+        </mat-step>
+      </ng-container>
+      <mat-step>
+        <ng-template matStepLabel>Resumen</ng-template>
+        <h3 class="summary-title">Resumen de Cuestionario</h3>
+        <div class="summary-grid">
+          <mat-card class="example-card" appearance="outlined" *ngFor="let point of points; let i = index">
+            <mat-card-content>
+              <p class="card-textA">Pregunta {{i+1}}</p>
+              <p class="card-textB">+ {{point}}</p>
+              <img class="summary-answer" src="assets/img/correct.png" alt="" *ngIf="point != 0">
+              <img class="summary-answer" src="assets/img/incorrect.png" alt="" *ngIf="point < 1">
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <h3 class="summary-subtitle">Total:</h3>
+        <h3 class="summary-text">{{totalPoints}} puntos</h3>
+        <button class="summary-button" [routerLink]="'/user/quizzes'">Terminar cuestionario</button>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
+<div class="response-container" *ngIf="submitAnswer">
+  <h1>{{ correctAnswer ? '¡Respuesta correcta!' : '¡Respuesta incorrecta!' }}</h1>
+  <img class="quizzesImg" src="assets/logo.png" alt="">
+  <button *ngIf="correctAnswer" (click)="nextQuestion(messageDialog)">Siguiente pregunta</button>
+  <button *ngIf="!correctAnswer && attemps < 2" (click)="submitAnswer = false">Intentar de nuevo</button>
+  <button *ngIf="!correctAnswer && attemps == 2" (click)="nextQuestion(messageDialog)">Siguiente pregunta</button>
+  <img src="assets/img/correct.png" alt="" *ngIf="correctAnswer">
+  <img src="assets/img/incorrect.png" alt="" *ngIf="!correctAnswer">
+  <h3>{{messageDialog}}</h3>
+</div>
+<router-outlet/>

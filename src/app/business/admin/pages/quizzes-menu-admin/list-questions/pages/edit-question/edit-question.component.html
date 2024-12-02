@@ -1,0 +1,57 @@
+<div class="container">
+  <app-nav-admin></app-nav-admin>
+
+  <div class="body-container">
+    <div class="main-content">
+      <div class="header">
+        <button [routerLink]="['/admin/quizzes/list-questions']" class="back-button"><img src="assets/img/arrow.png">
+        </button>
+        <h1>Editar Pregunta</h1>
+      </div>
+      <div class="form-container">
+
+      <form [formGroup]="questionForm">
+        <div class="form-group">
+          <label for="description" class="form-label">Ingresa la nueva pregunta:</label>
+          <textarea id="description" rows="4" class="form-input" formControlName="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="nivel" class="form-label">Elija el nivel:</label>
+          <select id="nivel" class="form-select" formControlName="level" (change)="setNivel($event )">
+            <option *ngFor="let n of levels">{{ n }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback" class="form-label">Ingresa el feedback:</label>
+          <input type="text" id="feedback" class="form-input" formControlName="feedback">
+        </div>
+
+        <!-- Sección para agregar respuestas -->
+        <div class="answers" formArrayName="answers">
+          <label class="form-label">Answers:</label>
+          <div class="answer-div" *ngFor="let answer of answers.controls; let i = index" [formGroupName]="i">
+            <input class="answer-textbox" formControlName="description" placeholder="Enter answer description" />
+            <label class="label-answer">
+              Is Correct:
+              <input class="answer-checkbox"  type="checkbox" formControlName="isCorrect" (change)="onCorrectAnswerSelected(i)" />
+            </label>
+            <button class="button-remove" type="button" (click)="removeAnswer(i)">Remove</button>
+          </div>
+        </div>
+
+        <button *ngIf="answers.length < 4" type="button" (click)="addAnswer()" class="button-add">Add Answer</button>
+
+        <div class="form-group">
+          <button class="submit-button" (click)="onSubmit()" >Guardar cambios</button>
+        </div>
+
+      </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -3,7 +3,7 @@ module.exports = {
     './src/**/*.{html,ts}', // Para Angular
     './pages/**/*.{js,ts,jsx,tsx}', // Para Next.js
     './components/**/*.{js,ts,jsx,tsx}',
-    './public/**/*.html', // Para HTML estático
+    './assets/**/*.html', // Para HTML estático
   ],
   theme: {
     extend: {},

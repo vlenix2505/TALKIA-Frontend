@@ -1,0 +1,48 @@
+<app-nav-user></app-nav-user>
+<div class="container">
+  <div class="header-t">
+    <button class="back-button" [routerLink]="['/user/profile']"><img src="assets/img/arrow.png"></button>
+  </div>
+  <div class="suscriptions-container">
+    <div class="left">
+      <h1>Plan actual</h1>
+      <div class="current-card" *ngIf="currentPlan">
+        <mat-card class="example-card" appearance="outlined">
+          <mat-card-header>
+            <mat-card-title>Suscripción {{currentPlan.varName1}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>S/. {{currentPlan.amount}}</p>
+          </mat-card-content>
+        </mat-card>
+        <button (click)="openDialog($event)">Cambiar Plan</button>
+      </div>
+    </div>
+    <div class="div-hr">
+      <hr class="vertical-line">
+    </div>
+    <div class="right">
+      <h1>Registros de pagos</h1>
+      <div class="group">
+        <label for="year" class="form-label">Filtrar por año:</label>
+        <select id="year" class="form-select" [(ngModel)]="selectedYear" (change)="onChange()">
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+        </select>
+      </div>
+
+      <div class="card-payment">
+        <mat-card class="example-s-card" appearance="outlined" *ngFor="let paymentHistory of dataSource.data">
+          <mat-card-header>
+            <mat-card-title>Asunto: Suscripción {{paymentHistory.varName1}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Fecha: {{paymentHistory.startDate}}</p>
+            <p class="pay-price">Monto: S/. {{paymentHistory.amount}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet/>
+

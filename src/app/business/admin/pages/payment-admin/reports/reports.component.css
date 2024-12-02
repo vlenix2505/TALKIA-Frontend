@@ -1,0 +1,186 @@
+.container{
+  height: 80vh;
+  width: 100%;
+}
+
+/* Contenedor principal */
+.plot {
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+h1 {
+  color: var(--t-wine);
+
+}
+
+/* Contenedor de resultados */
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #D9D9D9;
+}
+
+/* Contenedor de tablas */
+.table-results {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  flex-direction: column;
+}
+
+/* Contenedor de las tablas de suscripciones y pagos */
+.tables {
+  display: flex;
+  justify-content: center;
+}
+
+/* Botones de secciones Suscripciones y Pagos Recibidos */
+button {
+  background-color: var(--t-rose);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.controls button {
+  cursor: pointer;
+}
+
+
+/* Estilo de las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+th, td {
+  border: 1px solid var(--t-rose);
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #FFC8DD; /* color rosado claro */
+  color: #4a4a4a; /* color marrón oscuro */
+}
+
+/* Contenedor de controles */
+.controls {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filters{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botones de Generar Informe y Descargar Informe */
+.controls button {
+  background-color: #F72585; /* color rosado */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.controls button:hover {
+  background-color: #d61e73;
+}
+
+/* Generador de informe (icono y botón) */
+.generate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.generate img {
+  width: 15%;
+  margin-bottom: 10px;
+}
+
+/* Filtro de fechas */
+.date-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-filter label {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 8px;
+}
+
+.date-filter input[type="date"] {
+  padding: 8px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.payTable{
+  margin-left: 20px;
+}
+.radio-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.mat-mdc-cell{
+  text-align: center;
+  font-size: 14px;
+  color: var(--t-wine);
+  font-family: "Gill Sans MT";
+}
+
+.mat-mdc-header-cell{
+  text-align: center;
+  color: var(--t-wine);
+  font-size: 14px;
+  font-family: "Gill Sans MT";
+}
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 1%;
+  margin-top: 5px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+
+}
+
+

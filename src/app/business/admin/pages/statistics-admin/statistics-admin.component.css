@@ -1,0 +1,93 @@
+.container{
+  width: 100%;
+  height: 80vh;
+}
+
+.statistics-container {
+  text-align: center;
+  color: var(--t-wine);
+  padding: 20px;
+  height: auto;
+}
+
+.statistics-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.filter-container label {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.filter-container select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--t-wine);
+}
+
+.performance-stats {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.stat-item {
+  font-size: 16px;
+
+  width: 20%;
+}
+.stat-item p{
+padding-bottom: 10%;
+}
+.stat-item h3 {
+  font-size: 24px;
+  color: var(--t-wine);
+}
+
+.stat-icon img {
+  width: 170px;
+  height: 170px;
+}
+
+
+.back-button {
+  font-size: 24px;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 1%;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: var(--t-wine);
+  width: 100%;
+
+}
+
+.title-1{
+  display: flex;
+  width: 70%;
+  align-items: center;
+}
+
+.filter-container{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+

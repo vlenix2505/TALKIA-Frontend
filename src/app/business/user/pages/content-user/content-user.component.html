@@ -1,0 +1,70 @@
+
+<div class="container">
+  <app-nav-user></app-nav-user>
+  <section class="order">
+    <div class="order-1">
+      <button [routerLink]="['/user']" class="back-button"><img src="assets/img/arrow.png">
+      </button>
+    </div>
+    <div class="order-2">
+      <button (click)="onDate()">Ordenar por Fecha de Publicación</button>
+      <button (click)="onPopularity()">Ordenar por Popularidad</button>
+      <button (click)="resetOrder()">Resetear Orden</button>
+    </div>
+  </section>
+
+  <section class="frame">
+    <div class="panel">
+      <form>
+        <label class="form-title">Biblioteca</label>
+        <input #searchInput class="search-label" type="text" placeholder="Buscar..." (input)="onSearch($event)">
+
+        <label>Nivel de Dificultad</label>
+        <div class="set-label">
+          <input type="radio" name="difficulty" value="Basico"  (change)="onDifficultyChange($event)"> Básico
+        </div>
+        <div class="set-label">
+          <input type="radio" name="difficulty" value="Intermedio"  (change)="onDifficultyChange($event)"> Intermedio
+        </div>
+        <div class="set-label">
+          <input type="radio" name="difficulty" value="Avanzado"  (change)="onDifficultyChange($event)"> Avanzado
+        </div>
+        <label>Tipo de Material</label>
+        <div class="set-label">
+          <input type="radio" name="type" value="Video" (change)="onTypeChange($event)"> Video
+        </div>
+        <div class="set-label">
+          <input type="radio" name="type" value="Libro" (change)="onTypeChange($event)"> Libro
+        </div>
+        <div class="set-label">
+          <input type="radio" name="type" value="Audio" (change)="onTypeChange($event)"> Audio
+        </div>
+        <label>Tema</label>
+        <div class="set-label">
+          <input type="radio" name="theme" value="Grammar" (change)="onThemeChange($event)"> Grammar
+        </div>
+        <div class="set-label">
+          <input type="radio"  name="theme" value="Reading" (change)="onThemeChange($event)"> Reading
+        </div>
+        <div class="set-label">
+          <input type="radio"  name="theme" value="Listening" (change)="onThemeChange($event)"> Listening
+        </div>
+        <button id="btnTheme" type="button" (click)="onFiltersReset()">Reset</button>
+      </form>
+    </div>
+
+    <section class="list">
+      <div class="card" *ngFor="let content of dataSource.data">
+        <div class="card-1">
+          <img src="assets/img/content_description.png" alt="Icono">
+        </div>
+        <div class="card-2">
+          <h3>{{content.title}}</h3>
+          <p>Año: {{content.year}}</p>
+          <a [routerLink]="['content-user-details', content.id]" (click)="onRegister(content.id)">Ver más</a>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+<router-outlet/>
